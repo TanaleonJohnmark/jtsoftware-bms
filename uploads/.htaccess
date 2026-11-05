@@ -1,0 +1,10 @@
+# Uploaded photos are served as files only — never executed as scripts.
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+  php_flag engine off
+</IfModule>
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phps|cgi|pl|asp|aspx|shtml|sh)$">
+  Require all denied
+</FilesMatch>

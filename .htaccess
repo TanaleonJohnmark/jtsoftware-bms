@@ -1,0 +1,6 @@
+# Keep the config and database folders out of the browser.
+<FilesMatch "\.(sql|md)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes
+DirectoryIndex index.php
